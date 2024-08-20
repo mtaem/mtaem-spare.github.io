@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "password": "password1",
+            "role": "member",
+            "problem_count": 0,
+            "problems": []
+        },
+        {
+            "username": "user2",
+            "password": "password2",
+            "role": "admin",
+            "problem_count": 0,
+            "problems": []
+        },
+        {
+            "username": "user3",
+            "password": "password3",
+            "role": "banned",
+            "problem_count": 0,
+            "problems": []
+        }
+    ]
+}

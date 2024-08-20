@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mTaem登录</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        body {
+            background-color: #f4f4f4; /* 调整背景色以匹配首页 */
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 占满整个视口高度 */
+        }
+
+        .content {
+            background-color: #fff; /* 设置为白色背景 */
+            padding: 40px; /* 设置内边距 */
+            max-width: 400px; /* 设置最大宽度 */
+            border-radius: 8px; /* 添加圆角 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+            border: 1px solid #ddd; /* 添加浅灰色边框 */
+            width: 100%; /* 使宽度填充父容器 */
+            box-sizing: border-box; /* 包含内边距和边框在内的宽度 */
+            position: relative; /* 相对定位 */
+        }
+
+        .content a.arrow {
+            text-decoration: none; /* 去除下划线 */
+            color: #888; /* 灰色 */
+            position: absolute; /* 绝对定位 */
+            top: 10px; /* 上边距 */
+            left: 10px; /* 左边距 */
+            display: flex; /* 使用 Flex 布局 */
+            align-items: center; /* 垂直居中 */
+            cursor: pointer; /* 光标样式 */
+        }
+
+        .content a.arrow:hover {
+            color: #555; /* 深灰色 */
+        }
+
+        .content a.arrow img {
+            width: 20px; /* 图标宽度 */
+            margin-right: 5px; /* 右边距 */
+        }
+
+        h1 {
+            font-size: 24px; /* 大字 */
+            font-weight: bold; /* 粗体 */
+            margin-bottom: 10px; /* 底部间距 */
+            text-align: center; /* 文本居中 */
+            color: #333; /* 调整标题颜色 */
+        }
+
+        .label {
+            font-size: 14px; /* 小字 */
+            color: #888; /* 灰色 */
+            margin-bottom: 5px; /* 底部间距 */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* 输入框宽度 */
+            padding: 8px; /* 输入框内边距 */
+            margin-bottom: 15px; /* 底部间距 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 4px; /* 圆角 */
+            box-sizing: border-box; /* 包含内边距和边框在内的宽度 */
+        }
+
+        button {
+            background-color: #3498db; /* 蓝色按钮 */
+            color: white; /* 白色文字 */
+            padding: 10px 15px; /* 内边距 */
+            border: none; /* 去除边框 */
+            border-radius: 4px; /* 圆角 */
+            cursor: pointer; /* 光标样式 */
+            display: block; /* 独占一行 */
+            margin: 0 auto; /* 居中 */
+            width: 50%; /* 减小按钮宽度 */
+        }
+
+        button:hover {
+            background-color: #2980b9; /* 鼠标悬停时的背景色 */
+        }
+    </style>
+</head>
+<body>
+
+<section class="content">
+    <a href="index.html" title="返回首页" class="arrow">
+        <img src="left-arrow.png" alt="左箭头">
+        返回首页
+    </a>
+    <h1>登录mTaem</h1>
+<form id="login-form">
+<div class="label">用户名</div>
+<input type="text" id="username" placeholder="请输入用户名">
+<div class="label">用户密码</div>
+<input type="password" id="password" placeholder="请输入密码">
+<button type="button">登录</button>
+</form>
+
+</section>
+<script src="login.js"></script>
+</body>
+</html>
