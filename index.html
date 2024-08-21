@@ -68,7 +68,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative;
             left: 40px;
-            overflow: hidden;
         }
 
         #home .welcome-message {
@@ -85,7 +84,6 @@
             width: 300px;
             height: auto;
             left: 135px;
-            top: 0; /* Ensure the initial position is set */
         }
 
         footer {
@@ -154,21 +152,28 @@
     function positionLogo() {
         var home = document.getElementById('home');
         var logo = document.getElementById('logo');
-        var homeHeight = home.offsetHeight;
-        var logoHeight = logo.offsetHeight;
+        var homeHeight = home.clientHeight;
+        var logoHeight = logo.clientHeight;
         var topPosition = (homeHeight - logoHeight) / 2;
         logo.style.top = topPosition + 'px';
     }
 
-    function init() {
-        // Wait for all resources to be fully loaded before positioning logo
-        window.requestAnimationFrame(function() {
-            positionLogo();
-        });
-    }
+    document.getElementById('footer-text').addEventListener('click', function() {
+        var currentText = this.innerHTML;
+        if (currentText === 'mTaem~你编程路上的顺风车') {
+            this.innerHTML = 'mTaem~Your coding journey’s windfall';
+            document.querySelector('.welcome-message h2').innerHTML = 'Welcome to mTaem';
+            document.querySelector('.welcome-message p').innerHTML = 'Welcome to mTaem, your coding playground.';
+        } else {
+            this.innerHTML = 'mTaem~你编程路上的顺风车';
+            document.querySelector('.welcome-message h2').innerHTML = '欢迎来到mTaem';
+            document.querySelector('.welcome-message p').innerHTML = '欢迎来到mTaem，这里是你的编程练习场。';
+        }
+        positionLogo();
+    });
 
-    window.addEventListener('load', init);  // Use 'load' event to ensure all elements are fully rendered
-    window.addEventListener('resize', positionLogo); // Recalculate on resize
+    window.onload = positionLogo;
+    window.onresize = positionLogo;
 </script>
 
 </body>
